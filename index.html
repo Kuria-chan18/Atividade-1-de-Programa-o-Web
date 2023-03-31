@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogo do Dado</title>
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        <h1 class="title">Dado</h1>
+        <div>
+          <button id="botao-dado">Clique aqui e veja o resultado que o dado vai mostrar!</button>
+          <p id="resultado"></p>
+          <script>
+            const botao = document.getElementById("botao-dado");
+            const resultado = document.getElementById("resultado");
+
+            botao.addEventListener("click", function () {
+              const numeroAleatorio = Math.floor(Math.random() * 6) + 1;
+              resultado.innerText =
+                "O número é: " + numeroAleatorio;
+            });
+          </script>
+        </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
